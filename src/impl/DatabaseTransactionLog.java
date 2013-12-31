@@ -1,6 +1,6 @@
-package com.nokia.ci.impl;
+package impl;
 
-import com.nokia.ci.itf.TransactionLog;
+import itf.TransactionLog;
 
 public class DatabaseTransactionLog implements TransactionLog{
 

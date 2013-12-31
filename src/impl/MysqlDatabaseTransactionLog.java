@@ -1,4 +1,4 @@
-package com.nokia.ci.impl;
+package impl;
 
 
 public class MysqlDatabaseTransactionLog extends DatabaseTransactionLog{

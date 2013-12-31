@@ -1,12 +1,13 @@
-package com.nokia.ci;
+package ci;
+
+import impl.AliPayCreditCardProcessor;
+import impl.MysqlDatabaseTransactionLog;
+import itf.CreditCardProcessor;
+import itf.TransactionLog;
 
 import com.google.inject.AbstractModule;
-import com.nokia.ci.impl.DatabaseTransactionLog;
-import com.nokia.ci.impl.PaypalCreditCardProcessor;
-import com.nokia.ci.itf.CreditCardProcessor;
-import com.nokia.ci.itf.TransactionLog;
 
-public class BillingModule extends AbstractModule {
+public class AnotherBillingModule extends AbstractModule {
 	  @Override 
 	  protected void configure() {
 
@@ -14,12 +15,12 @@ public class BillingModule extends AbstractModule {
 	      * This tells Guice that whenever it sees a dependency on a TransactionLog,
 	      * it should satisfy the dependency using a DatabaseTransactionLog.
 	      */
-	    bind(TransactionLog.class).to(DatabaseTransactionLog.class);
+	    bind(TransactionLog.class).to(MysqlDatabaseTransactionLog.class);
 
 	     /*
 	      * Similarly, this binding tells Guice that when CreditCardProcessor is used in
 	      * a dependency, that should be satisfied with a PaypalCreditCardProcessor.
 	      */
-	    bind(CreditCardProcessor.class).to(PaypalCreditCardProcessor.class);
+	    bind(CreditCardProcessor.class).to(AliPayCreditCardProcessor.class);
 	  }
 	}

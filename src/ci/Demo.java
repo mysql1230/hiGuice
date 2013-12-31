@@ -1,10 +1,10 @@
-package com.nokia.ci;
+package ci;
+
+import itf.CreditCard;
+import itf.PizzaOrder;
 
 import com.google.inject.Guice;
-import com.google.inject.Inject;
 import com.google.inject.Injector;
-import com.nokia.ci.itf.CreditCard;
-import com.nokia.ci.itf.PizzaOrder;
 
 public class Demo {
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package com.nokia.ci.impl;
+package impl;
 
-import com.nokia.ci.itf.CreditCardProcessor;
+import itf.CreditCardProcessor;
 
 public class AliPayCreditCardProcessor implements CreditCardProcessor{
 

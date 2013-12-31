@@ -1,12 +1,13 @@
-package com.nokia.ci;
+package ci;
+
+import itf.BillingService;
+import itf.CreditCard;
+import itf.CreditCardProcessor;
+import itf.PizzaOrder;
+import itf.Receipt;
+import itf.TransactionLog;
 
 import com.google.inject.Inject;
-import com.nokia.ci.itf.BillingService;
-import com.nokia.ci.itf.CreditCard;
-import com.nokia.ci.itf.CreditCardProcessor;
-import com.nokia.ci.itf.PizzaOrder;
-import com.nokia.ci.itf.Receipt;
-import com.nokia.ci.itf.TransactionLog;
 
 public class RealBillingService implements BillingService{
 	private final CreditCardProcessor processor;
